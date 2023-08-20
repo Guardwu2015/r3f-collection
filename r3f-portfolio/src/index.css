@@ -1,0 +1,187 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  box-sizing: border-box;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --pool-color: rgb(86, 109, 239);
+  --yellow-lines: rgb(255, 213, 103);
+  --header-red: rgb(255, 154, 166);
+  --menu-bg: rgb(40, 51, 53);
+  --canvas-bg: rgb(242, 238, 227);
+  --menu-blue: rgb(0, 32, 57);
+  --menu-blue-border: rgb(29, 156, 255);
+  --plant-bg: #e7fde7;
+
+}
+
+div {
+  box-sizing: border-box;
+}
+
+  /* fonts */
+  @font-face {
+    font-family: 'SpaceGrotesk';
+    font-weight:400;
+    src: url('/fonts/SpaceGrotesk-Medium.woff2') format(woff2);
+  }
+
+  @font-face {
+    font-family: 'Limelight';
+    font-weight:400;
+    src: url('/fonts/Limelight-Regular.woff2') format(woff2);
+  }
+
+  @font-face {
+    font-family: 'PoiretOne';
+    font-weight:400;
+    src: url('/fonts/PoiretOne-Regular.woff2') format(woff2);
+  }
+
+  @font-face {
+    font-family: 'Amatic';
+    font-weight:400;
+    src: url('/fonts/amatic-sc-v24-latin-regular.woff') format(woff);
+  }
+
+  @font-face {
+    font-family: 'Bangers';
+    font-weight:400;
+    src: url('/fonts/bangers-v20-latin-regular.woff') format(woff);
+  }
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@keyframes spinAnimation {
+  from {transform:translate(-50%, -50%) rotate(0deg); }
+  to {transform:translate(-50%, -50%) rotate(360deg);}
+}
+
+.ring {
+  pointer-events: none;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  will-change: width, height, transform, border;
+  z-index: 999;
+  padding:16px;
+  background:conic-gradient(
+    rgba(200, 200, 200, 0.5) 0deg,
+    rgba(26, 82, 236, 0.3) 40deg,
+    rgba(200, 200, 200, 0.5) 60deg
+    );
+  -webkit-mask:radial-gradient(farthest-side, transparent calc(100% - 12px), #fff 0);
+  mask:radial-gradient(farthest-side, transparent calc(100% - 12px),#fff 0);
+  animation: 2s infinite cubic-bezier(0.36, 0.24, 0.69, 0.51) spinAnimation;
+  border:0.5px solid rgba(26, 82, 236, 0.3);
+  transition:background-color 1.0s ease;
+}
+
+.ringWide {
+  width:115px;
+  height:115px;
+  background:conic-gradient(
+    rgba(200, 200, 200, 0.5) 0deg,
+    rgba(92, 240, 7, 0.6) 40deg,
+    rgba(200, 200, 200, 0.5) 60deg
+    );
+  -webkit-mask:radial-gradient(farthest-side, transparent calc(100% - 16px), #fff 0);
+  mask:radial-gradient(farthest-side, transparent calc(100% - 16x),#fff 0);
+}
+
+
+.dot {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(200, 200, 200, 0.5);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  pointer-events: none;
+}
+
+.dot.ringWide {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(147, 250, 87);
+}
+
+.ring.hovered {
+  width: 50px;
+  height: 50px;
+  border-width: 3px;
+  border-color: lightgray;
+}
+
+.dot.hovered {
+  display: none;
+}

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Flamenco:wght@300;400&display=swap');
+
+html,
+body,
+#root
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ivory;
+    /* cursor:none; */
+}
+
+:root {
+    --grey:rgba(0, 0, 0, 0.2);
+    --lighter-grey:rgba(0, 0, 0, 0.05);
+    --darker-grey:rgba(0, 0, 0, 0.4);
+}
+
+canvas {
+    /* cursor: none; */
+}

@@ -1,0 +1,23 @@
+.loader {
+    width:300px;
+    font-size:24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 80px;
+}
+
+.progress {
+    width: 200px;
+    border: 1px solid white;
+    height: 20px;
+    border-radius: 4px;
+    padding: 2px;
+    overflow:hidden;
+}
+
+.progressValue {
+    color: white;
+    height: 100%;
+    background-color: white;
+}
