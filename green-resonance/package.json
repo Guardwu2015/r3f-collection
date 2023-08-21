@@ -1,0 +1,40 @@
+{
+  "name": "r3f-ts-playground",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@react-three/drei": "9.78.1",
+    "@react-three/fiber": "8.13.4",
+    "@react-three/postprocessing": "2.7.1",
+    "fitty": "2.3.6",
+    "gl-noise": "1.6.1",
+    "leva": "0.9.34",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "4.8.0",
+    "react-scripts": "5.0.1",
+    "three": "0.154.0",
+    "three-custom-shader-material": "5.3.8"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.13.8",
+    "@types/react": "^18.0.34",
+    "@types/react-dom": "^18.0.11",
+    "@types/three": "^0.150.1",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

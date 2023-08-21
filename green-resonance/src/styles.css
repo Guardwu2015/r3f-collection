@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Rampart+One&display=swap");
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#root,
+body,
+canvas {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+#root {
+  background: rgb(207, 201, 225);
+  background: linear-gradient(
+    228deg,
+    rgba(207, 201, 225, 1) 0%,
+    rgba(176, 160, 190, 1) 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: 100%;
+}
+
+.copy-container {
+  width: 90%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy-container h1 {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 170, 80, 1) 44%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-family: "Rubik Moonrocks", cursive;
+
+  font-size: clamp(min size, 2vw, max size);
+  margin: 0;
+
+  transform: scaleY(2);
+}
+
+.my-tag {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  pointer-events: none;
+
+  font-family: "Cabin Sketch", sans-serif;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.my-tag svg {
+  width: 32px;
+  fill: white;
+}
+
+.my-tag > * {
+  padding: 32px;
+  padding-bottom: 64px;
+}
+
+.my-tag a {
+  color: black;
+  cursor: pointer;
+  font-family: "Cabin Sketch", sans-serif;
+  text-underline-offset: 2px;
+  text-decoration: none;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.my-tag a:hover {
+  text-decoration: underline;
+}
