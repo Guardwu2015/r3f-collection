@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Spline + R3F - Minigame</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body,
+      #root {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      body {
+        --rgb-text: 255, 255, 255;
+        --color-background: rgba(18, 19, 22, 1);
+        --color-highlight: rgba(32, 32, 32, 1);
+        --color-title: rgba(var(--rgb-text), 1);
+        --color-body: rgba(var(--rgb-text), 0.8);
+        --color-light: rgba(var(--rgb-text), 0.6);
+        --grid-gap: 2.5rem;
+
+        font-family: 'Spline Sans', sans-serif;
+        font-weight: 400;
+        line-height: 1.15;
+        color: var(--color-body);
+        background: var(--color-background);
+      }
+
+      h1 {
+        font-size: calc((30 / 16) * 1rem);
+        font-weight: 500;
+        color: var(--color-title);
+      }
+
+      @media (max-width: 696px) {
+        h1 {
+          font-size: calc((24 / 16) * 1rem);
+        }
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade-out {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      .game__canvas {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        animation: fade-in 1s ease 0.3s forwards;
+      }
+
+      .game__timer {
+        position: absolute;
+        top: var(--grid-gap);
+        pointer-events: none;
+      }
+
+      .game__hint {
+        font-family: inherit;
+        position: absolute;
+        bottom: var(--grid-gap);
+        border-radius: 2.5rem;
+        padding: 1rem 1.5rem;
+        background: var(--color-highlight);
+        color: var(--color-light);
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .game__hint:hover,
+      .game__hint:focus,
+      .game__hint:active {
+        opacity: 0.8;
+        transition: 0.3s ease opacity;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
